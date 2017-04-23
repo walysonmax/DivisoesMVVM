@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using DivisoesMVVM.Pages;
 using Xamarin.Forms;
 
 namespace DivisoesMVVM
@@ -13,7 +13,7 @@ namespace DivisoesMVVM
         {
             InitializeComponent();
 
-            MainPage = new DivisoesMVVM.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

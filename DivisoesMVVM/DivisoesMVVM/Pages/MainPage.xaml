@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DivisoesMVVM"
+             x:Class="DivisoesMVVM.Pages.MainPage"
+             Title="Divisões"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <ScrollView>
+        <StackLayout 
+        Padding="8">
+            <Label 
+            Text="Real:">
+            </Label>
+            <Entry 
+            Text="{Binding Real}"
+            Keyboard="Numeric" 
+            Placeholder="Entre valor en pesos...">
+            </Entry>
+            <Button 
+            Command="{Binding ConvertCommand}"
+            Text="Convertir">
+            </Button>
+            <Label
+            Text="Dólares:">
+            </Label>
+            <Entry
+            Text="{Binding Dollars, StringFormat='${0:N2}'}" 
+            IsEnabled="false" 
+            Placeholder="Valor en dólares...">
+            </Entry>
+            <Label
+            Text="Libras:">
+            </Label>
+            <Entry
+              Text="{Binding Libras, StringFormat='£{0:N2}'}"
+            IsEnabled="false" 
+            Placeholder="Valor en libras...">
+            </Entry>
+            <Label
+            Text="Euros:">
+            </Label>
+            <Entry
+             Text="{Binding Euros, StringFormat='€{0:N2}'}"
+            IsEnabled="false" 
+            Placeholder="Valor en euros...">
+            </Entry>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
